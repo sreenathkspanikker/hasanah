@@ -1,0 +1,37 @@
+{
+    "projects": [
+      {
+        "id": "0",
+        "category": "Animals",
+        "country": "Egypt",
+        "title": "Technology Access for Public Scholls Nigeria",
+        "price": "42,291",
+        "raised": "raised of $110,000",
+        "progress": "40",
+        "date": "35 days left",
+        "img": "avatar-2.jpg"
+      },
+      {
+        "id": "1",
+        "category": "Animals",
+        "country": "Egypt",
+        "title": "Technology Access for Public Scholls Nigeria",
+        "price": "42,291",
+        "raised": "raised of $110,000",
+        "progress": "85",
+        "date": "35 days left",
+        "img": "avatar-2.jpg"
+      },
+      {
+        "id": "2",
+        "category": "Animals",
+        "country": "Egypt",
+        "title": "Technology Access for Public Scholls Nigeria",
+        "price": "42,291",
+        "raised": "raised of $110,000",
+        "progress": "20",
+        "date": "35 days left",
+        "img": "avatar-2.jpg"
+      }
+    ]
+}

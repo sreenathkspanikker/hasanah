@@ -1,0 +1,14 @@
+.layout {
+    .container{
+        position: relative;
+        padding-top: 4.7rem;
+        @include media-breakpoint-down(sm) { 
+            padding-top: 2rem;
+        }
+        .card-message{
+            &.ml-auto{
+                @include position(absolute, 1.1rem, 1rem, auto, auto)
+            }
+        }
+    }
+}
