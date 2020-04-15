@@ -1,0 +1,161 @@
+header {
+  position: relative;
+  z-index: 999;
+  .navbar {
+    padding: 0.5rem 3rem;
+    @include media-breakpoint-down(sm) {
+      padding: 0.5rem 15px;
+    }
+    .navbar-toggler {
+      border: 0;
+      outline: none;
+      box-shadow: none;
+      transform: rotate(-90deg);
+      transform: all ease 0.4s;
+      &.collapsed {
+        transform: rotate(0deg);
+      }
+    }
+
+    // NAVNAR
+    .navbar-nav {
+      align-items: center;
+      @include media-breakpoint-down(md) {
+        align-items: initial;
+      }
+      .nav-link {
+        @include font-family($font-main, 0.9em, $black, 600, 1em);
+        @include flex(flex, center, normal);
+        padding: 0.5rem 1.5rem;
+        @media (max-width: 1050px) {
+          font-size: 0.7em;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 1em;
+          padding: 0.5rem 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        .badge {
+          width: 42px;
+          height: 42px;
+          margin-left: 1rem;
+          line-height: 25px;
+          border-radius: 100%;
+          background-color: $brand;
+          display: inline-block;
+          border: 5px solid rgba(#e1f1e4, 0.5);
+        }
+        @include hover-active {
+          color: $brand;
+        }
+      }
+      // FORM
+      .form-inline {
+        padding-left: 1.5rem;
+        @include placeholder {
+          @include font-family($font-main, 0.9em, #b7bbbf, 600, 1em);
+        }
+        @include media-breakpoint-down(md) {
+          padding: 0;
+          flex-flow: nowrap;
+        }
+        .form-control {
+          border: 0;
+          box-shadow: none;
+          background-color: transparent;
+        }
+        .icon {
+          margin-top: 5px;
+          color: $black;
+        }
+      }
+      &.ml-auto {
+        .nav-link {
+          padding: 0.2rem 0.5rem;
+          position: relative;
+          @include media-breakpoint-down(md) {
+            padding: 0.5rem 0;
+            width: fit-content;
+          }
+          .dot {
+            display: block;
+            width: 11px;
+            height: 11px;
+            background-color: $brand;
+            border-radius: 100%;
+            z-index: 1;
+            border: 2px solid $bg;
+            @include position(absolute, 0, 3px, auto, auto);
+          }
+        }
+        .dropdown {
+          margin: 0 1.5rem;
+          @include media-breakpoint-down(md) {
+            margin: 0;
+          }
+        }
+      }
+    }
+    // VIAIBLE LG
+    .visible-md {
+      width: 100%;
+    }
+
+    // MENU
+    .munu-wrap {
+      &.show {
+        @include position(fixed, 0, auto, auto, 0);
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(black, 0.8);
+        .btn-humburger {
+          position: fixed;
+          right: 0;
+          top: 0;
+          margin: 0.5rem 3rem;
+          font-size: 1.2em;
+          color: white;
+          @include media-breakpoint-down(sm) {
+            margin: 0.5rem 15px;
+          }
+        }
+        .content {
+          margin-top: 3rem;
+          padding: 1rem;
+          padding-right: 2rem;
+          .navbar-nav {
+            .form-inline {
+              padding: 0 1rem;
+              background-color: white;
+              border-radius: 4px;
+              margin-bottom: 2rem;
+              .form-control {
+                height: 55px;
+              }
+            }
+            .nav-link {
+              color: white;
+            }
+            //NOTIFICATIONS
+            &.nav-notification {
+              @include flex(flex, center, normal);
+              flex-direction: initial;
+              margin-bottom: 2rem;
+              .nav-link {
+                padding: 0.5rem 1rem;
+              }
+            }
+            //NAV PROFILE
+            &.nav-profile {
+              @include flex(flex, baseline, normal);
+              flex-direction: initial;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

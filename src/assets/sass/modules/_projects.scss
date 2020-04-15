@@ -1,0 +1,89 @@
+.projects{
+    padding: 5rem 0;
+    h2{
+        @include flex(flex, center, space-between);
+        margin-bottom: 2rem;
+        .btn{
+            width: 130px;
+            height: 50px;
+            flex: none;
+            border-radius: 20px;
+            background-color: rgba( $orange, 0.2);
+            @include font-family($font-main, 16px, $orange, 600, 1);
+            @include hover-active{
+                background-color: rgba( $orange, 1);
+                color: white;
+            }
+        }
+    }
+
+        .row{
+            > div{
+                &:nth-last-child(1){
+                    @include media-breakpoint-down(md) { 
+                        display: none;
+                    }
+                }
+                &:nth-last-child(2){
+                    @include media-breakpoint-down(sm) { 
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    .card-project{
+        @include card;
+        padding: 1rem;
+        .card-img-top{
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+        }
+        .card-body{
+            padding: 0;
+            padding-top: 1rem;
+            ul{
+                margin-top: 0;
+                padding: 0;
+                list-style: none;
+                @include flex(flex, center, normal);
+               li{
+                @include font-family($font-main, 16px, $orange, 600, 1);
+                padding-right: 1rem;
+                & + li{
+                    border-left: 1px solid $grey;
+                    padding: 0 1rem;
+                    color: $black;
+                }
+               }
+            }
+            .card-title{
+                @include font-family($font-main, 1em, $black, 600, 1.5rem);
+            }
+            .card-text{
+                margin: 1rem 0;
+                strong{
+                    @include font-family($font-main, 0.9em, $black, 600, 1);
+                }
+            }
+            .progress{
+                height: 6px;
+                background-color: $lightGreen;
+                .progress-bar{
+                    background-color: $brand;
+                }
+            }
+            .btn{
+                width: 115px;
+                height: 50px;
+                border-radius: 50px;
+                margin-top: 1rem;
+                &.btn-like{
+                    @include hover-active{
+                        color: rgba( $orange, 1);
+                    }
+                }
+            }
+        }
+    }
+}

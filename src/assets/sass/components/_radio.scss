@@ -1,0 +1,29 @@
+.ant-radio-group {
+    @include flex(flex, center, normal);
+    .ant-radio-wrapper{
+        margin-right: 1rem;
+        @include flex(flex, center, normal);
+        @include font-family($font-main, 1em, $black, 600, 1);
+        .ant-radio {
+            .ant-radio-inner {
+                width: 25px;
+                height: 25px;
+                background-color: #e1f1e4;
+                border-color: #e1f1e4 !important;
+                &:after{
+                    width: 15px;
+                    height: 15px;
+                    top: 4px;
+                    left: 4px;
+                    background-color: $brand;
+                }
+            }
+            & + * {
+                padding: 0 1rem;
+            }
+        }
+        @include hover-active{
+            color: $brand;
+        }
+    }
+}

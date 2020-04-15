@@ -1,0 +1,100 @@
+footer{
+    padding: 3rem 0 2rem 0;
+    background-color: #fefefe;
+    .container{
+        padding-top: 0 !important;
+        .row > div{
+            position: relative;
+        }
+        .top{
+            .row > div{
+                @include media-breakpoint-down(xs) { 
+                    margin-bottom: 2rem;
+                 }
+            } 
+        }
+    }
+
+    p{
+        margin-bottom: 1rem;
+    }
+    .nav{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .nav-link{
+            display: block;
+            padding: 0;
+            @include font-family($font-main, 1em, $black, 400, 2.5em);
+            @include hover-active{
+                color: $brand;
+            }
+        }
+    }
+    .currency{
+        width: 100%;
+        @include position(absolute, auto, auto, 0, 0);
+        padding: 0 1rem;
+        @include media-breakpoint-down(md) { 
+            position: static;
+            padding: 2rem 0;
+         }
+        .nav{
+            .nav-link{
+                @include font-family($font-main, 1em, $black, 400, 1);
+                padding:  0.3rem 0;
+                &:last-child{
+                    padding-left: 1rem;
+                }
+                @include hover-active{
+                    color: $brand;
+                }
+                &.active{
+                    font-weight: 600;
+                    border-bottom: 2px solid $brand;
+                }
+            }
+        }
+    }
+    .bottom{
+        margin-top: 5rem;
+        @include media-breakpoint-down(md) { 
+            margin-top: 2rem;
+         }
+        @include media-breakpoint-down(xs) { 
+            margin-top: 0;
+         }
+        p{
+            @include font-family($font-main, 1em, $black, 400, 2.5em);
+            margin-bottom: 0;
+            span{
+                font-weight: 600;
+            }
+            @include media-breakpoint-down(md) { 
+                text-align: center;
+                
+             }
+        }
+        .nav{
+            @include flex(flex, center, normal);
+            @include media-breakpoint-down(md) { 
+                text-align: center;
+                justify-content: center;
+             }
+            .nav-link{
+                padding: 0 2rem;
+                color: $grey;
+                @include media-breakpoint-down(lg) { 
+                    padding: 0 0.8rem;
+                }
+                &:first-child{
+                    padding-left: 0;
+                }
+                @include hover-active{
+                    color: $black;
+                }
+
+            }
+        }
+    }
+}

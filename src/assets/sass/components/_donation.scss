@@ -1,0 +1,77 @@
+.c-donation {
+  @include card;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1rem;
+  }
+  .list-group-item {
+    padding: 1.5rem;
+    border-color: #f8f8f8;
+    .details {
+      .card-message {
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        overflow: initial;
+        &::after {
+          display: none;
+        }
+        .card-img-left {
+          width: 81px;
+          height: 81px;
+          border-radius: 20px;
+        }
+        .card-body {
+          @include flex(flex, normal, space-between);
+          .dropdown {
+            .btn {
+              border-radius: 100%;
+              padding: 0.2rem;
+              width: 30px;
+              height: 30px;
+              color: $black;
+              @include hover-active {
+                color: $orange;
+                background-color: rgba($orange, 0.2);
+              }
+            }
+            &.show {
+              .btn {
+                color: $orange;
+                background-color: rgba($orange, 0.2);
+              }
+            }
+            .dropdown-menu {
+              margin-top: -3rem;
+              margin-left: -2rem;
+              box-shadow: 7px 7px 10px 8px rgba(0, 0, 0, 0.04);
+              .dropdown-item {
+                &.active {
+                  background: $lightGreen;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .action {
+      @include flex(flex, normal, space-between);
+      .badge {
+        width: 130px;
+        height: 50px;
+        padding: 0.5rem 1rem;
+        background-color: $bg;
+        text-align: left;
+        border-radius: 15px;
+        @include font-family($font-main, 1.1em, $black, 600, 1);
+        .form-control {
+          border: 0;
+          box-shadow: none;
+          outline: none;
+          background-color: transparent;
+          overflow: hidden !important;
+        }
+      }
+    }
+  }
+}
