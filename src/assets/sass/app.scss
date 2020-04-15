@@ -4,7 +4,6 @@
 // ANTS
 @import "~antd/dist/antd";
 
-
 // UTIL
 @import "./utils/variables", "./utils/mixins";
 
@@ -16,7 +15,9 @@
 
 // COMPONENT
 @import "./components/button", "./components/header", "./components/typography",
-  "./components/badge", "./components/message", "./components/donation",  "./components/radio", "./components/addmore", "./components/total", "./components/footer";
+  "./components/badge", "./components/message", "./components/donation",
+  "./components/radio", "./components/addmore", "./components/total",
+  "./components/footer", "./components/pageloader";
 
 // MODULES
 @import "./modules/donation", "./modules/projects";
