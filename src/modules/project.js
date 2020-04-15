@@ -8,7 +8,6 @@ import {
   ProgressBar,
 } from "react-bootstrap";
 import Api from "../utils/project.json";
-import Img from "../assets/images/project-1.jpg";
 import Icon from "../componentes/icon";
 
 const Project = () => {
@@ -24,7 +23,7 @@ const Project = () => {
           return (
             <Col md={6} lg={4}>
               <Card className="card-project">
-                <Card.Img variant="top" src={Img} />
+                <Card.Img variant="top" src={d.img} />
                 <Card.Body>
                   <ul>
                     <li>Animals</li>

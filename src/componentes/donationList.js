@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { Card, ListGroup, Badge, Dropdown, FormControl } from "react-bootstrap";
-import Img from "../assets/images/avatar-2.jpg";
 import api from "../utils/donation.json";
 import Icon from "../componentes/icon";
-import { Radio } from "antd";
+import { Radio, notification } from "antd";
 
 const DonationList = (props) => {
   const [state, setstate] = useState(api.donation);
+  const [isEmpty, setEmpty] = useState(false);
 
   useEffect(() => {
     setstate(api.donation);
     totalAmount();
   }, []);
 
+  // NOTIFICATION
+  const openNotification = (placement) => {
+    notification.info({
+      message: "Success",
+      description: "Donation list item deleted",
+      placement,
+    });
+  };
+
+  // ON CHANGE
   const onChangeField = (e, idx) => {
     const value = e.target.value === "" ? 0 : e.target.value;
     state[idx].price = value;
@@ -20,6 +30,7 @@ const DonationList = (props) => {
     totalAmount();
   };
 
+  // TOTAL COUNT
   const totalAmount = () => {
     const price = state.reduce(function (acc, val) {
       return parseInt(acc) + parseInt(val.price);
@@ -27,21 +38,33 @@ const DonationList = (props) => {
     props.totlAmount(price);
   };
 
-  const deleteItem = (e, i) => {
-    state.splice(i, 1);
+  // DELETE ITEMS
+  const deleteItem = (idx) => {
+    state.splice(idx, 1);
     setstate(state);
     totalAmount();
+    openNotification("bottomRight");
+    if (state.length === 0) {
+      setEmpty(true);
+    }
   };
 
   return (
     <Card className="c-donation">
+      {isEmpty && (
+        <Card className="card-message">
+          <Card.Body>
+            <Card.Title className="m-0">No data foud</Card.Title>
+          </Card.Body>
+        </Card>
+      )}
       <ListGroup variant="flush">
         {state.map((d, i) => {
           return (
             <ListGroup.Item>
               <div className="details mb-3">
                 <Card className="card-message">
-                  <Card.Img variant="left" src={Img} />
+                  <Card.Img variant="left" src={d.img} />
                   <Card.Body>
                     <div className="text-wrap">
                       <Card.Title>{d.title}</Card.Title>
@@ -55,7 +78,7 @@ const DonationList = (props) => {
                         <Dropdown.Item>
                           Move to Following projects
                         </Dropdown.Item>
-                        <Dropdown.Item onClick={() => deleteItem(d, i)}>
+                        <Dropdown.Item onClick={() => deleteItem(i)}>
                           Delete
                         </Dropdown.Item>
                       </Dropdown.Menu>
@@ -88,4 +111,5 @@ const DonationList = (props) => {
     </Card>
   );
 };
+
 export default DonationList;

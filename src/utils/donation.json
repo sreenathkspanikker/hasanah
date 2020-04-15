@@ -5,7 +5,7 @@
       "title": "Ocean's Coral Reef",
       "description": "Sadaqah",
       "price": "15",
-      "img": "avatar-2.jpg",
+      "img": "https://i.picsum.photos/id/1040/200/300.jpg",
       "radio": [
         {
           "value": "1",
@@ -22,7 +22,7 @@
       "title": "Ocean's Coral Reef",
       "description": "Sadaqah",
       "price": "100",
-      "img": "avatar-2.jpg",
+      "img": "https://i.picsum.photos/id/1036/200/300.jpg",
       "radio": [
         {
           "value": "3",
@@ -39,7 +39,7 @@
       "title": "Ocean's Coral Reef",
       "description": "Sadaqah",
       "price": "165",
-      "img": "avatar-2.jpg",
+      "img": "https://i.picsum.photos/id/1039/200/300.jpg",
       "radio": [
         {
           "value": "5",
