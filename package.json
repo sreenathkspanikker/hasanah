@@ -15,7 +15,9 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-owl-carousel2": "^0.3.0",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
