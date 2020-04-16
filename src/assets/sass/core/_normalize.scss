@@ -360,9 +360,8 @@ p {
   @include font-family($font-main, 18px, $grey, normal, 1);
   margin: 0;
 }
-
-// @media (min-width: 1200px){
-//   .container{
-//     max-width: 1040px;
-//   }
-// }
+@media screen and (min-width: 1200px), screen and (max-width: 1400px) {
+  .container {
+    max-width: 1040px;
+  }
+}
