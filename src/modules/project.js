@@ -8,12 +8,10 @@ import {
   ProgressBar,
 } from "react-bootstrap";
 import Icon from "../componentes/icon";
-import Api from "../utils/project.json";
 import Slider from "react-slick";
 import ImgOne from "../assets/images/project-1.jpg";
 import ImgTwo from "../assets/images/project-2.jpg";
 import ImgThree from "../assets/images/project-3.jpg";
-import Icon from "../componentes/icon";
 
 const Project = () => {
   const settings = {
