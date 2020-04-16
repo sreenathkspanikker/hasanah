@@ -21,7 +21,7 @@ const Total = (props) => {
             <Card.Text>Including monthly payment</Card.Text>
           </article>
         </div>
-        <Button>Continue</Button>
+        <Button variant="primary">Continue</Button>
       </Card.Body>
     </Card>
   );

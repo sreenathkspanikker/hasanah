@@ -22,7 +22,7 @@ const Addmore = () => {
             <Card.Text>of Zakat will remain</Card.Text>
           </article>
         </div>
-        <Button>Add more projects</Button>
+        <Button variant="link">Add more projects</Button>
       </Card.Body>
     </Card>
   );

@@ -25,7 +25,7 @@ const Donation = () => {
               will be changed $125.00 today. Starting next month, your credit
               card will be charged $15.00 each month..
             </p>
-            <Button>Learn more</Button>
+            <Button variant="link-black">Learn more</Button>
           </article>
         </Col>
       </Row>

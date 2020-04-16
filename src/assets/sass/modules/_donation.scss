@@ -20,13 +20,12 @@
     p {
       @include font-family($font-main, 0.9em, $grey, 400, 1.3em);
     }
-    .btn {
-      padding: 0;
-      margin-top: 1rem;
-      background-color: transparent !important;
-      @include font-family($font-main, 0.9em, $black, 600, 1);
-      @include hover-active {
-        color: $brand;
+  }
+  .wrap {
+    @include media-breakpoint-only(md) {
+      display: flex;
+      > div {
+        flex: 1 1 0;
       }
     }
   }

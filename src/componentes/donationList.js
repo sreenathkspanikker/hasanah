@@ -3,6 +3,7 @@ import { Card, ListGroup, Badge, Dropdown, FormControl } from "react-bootstrap";
 import api from "../utils/donation.json";
 import Icon from "../componentes/icon";
 import { Radio, notification } from "antd";
+import { ExclamationCircleOutlined } from "@ant-design/icons";
 
 const DonationList = (props) => {
   const [state, setstate] = useState(api.donation);
@@ -52,9 +53,12 @@ const DonationList = (props) => {
   return (
     <Card className="c-donation">
       {isEmpty && (
-        <Card className="card-message">
+        <Card className="card-info">
           <Card.Body>
-            <Card.Title className="m-0">No data foud</Card.Title>
+            <Card.Title className="m-0">
+              <ExclamationCircleOutlined />
+              No data foud
+            </Card.Title>
           </Card.Body>
         </Card>
       )}
@@ -89,6 +93,8 @@ const DonationList = (props) => {
               <div className="action">
                 <Radio.Group>
                   {d.radio.map((data) => {
+                    console.log(data);
+
                     return <Radio value={data.value}>{data.name}</Radio>;
                   })}
                 </Radio.Group>

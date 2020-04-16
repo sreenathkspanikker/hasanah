@@ -3,6 +3,19 @@
   @include media-breakpoint-down(md) {
     margin-bottom: 1rem;
   }
+  .card-info {
+    overflow: hidden;
+    margin: 1rem;
+    border: 0;
+    .card-title {
+      @include flex(flex, center, normal);
+      .anticon {
+        margin-right: 1rem;
+        font-size: 2rem;
+        color: $orange;
+      }
+    }
+  }
   .list-group-item {
     padding: 1.5rem;
     border-color: #f8f8f8;
@@ -29,8 +42,9 @@
               width: 30px;
               height: 30px;
               color: $black;
+              border: 0;
               @include hover-active {
-                color: $orange;
+                color: $orange !important;
                 background-color: rgba($orange, 0.2);
               }
             }

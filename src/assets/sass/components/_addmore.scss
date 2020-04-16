@@ -1,54 +1,49 @@
-.addmore{
-    @include card;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    @include media-breakpoint-down(md) { 
-        margin-bottom: 1rem;
-    }
-    .card-body{
-        .content{
-            @include flex(flex, center, normal);
-            article{
-                padding-left: 1.5rem;
-                .card-title{
-                    margin-bottom: 0.3rem;
-                    @include font-family($font-main, 1.8em, $black, 600, 1);
-                    @include flex(flex, center, normal);
-                    .icon{
-                        margin-top: 0.3rem;
-                    }
-                }
-                .card-text{
-                    font-size: 0.8em;
-                }
-            }
-
-            .ant-progress{
-                .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
-                    stroke: $brand;
-                }
-                .ant-progress-inner{
-                    path.ant-progress-circle-trail{
-                        stroke-width: 12px;
-                    }
-                    .ant-progress-circle-path{
-                        stroke-width: 12px;
-                    }
-                    .ant-progress-text{
-                        display: none;
-                    }
-                }
-            }
+.addmore {
+  @include card;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  @include media-breakpoint-only(md) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1rem;
+  }
+  .card-body {
+    .content {
+      @include flex(flex, center, normal);
+      article {
+        padding-left: 1.5rem;
+        .card-title {
+          margin-bottom: 0.3rem;
+          @include font-family($font-main, 1.8em, $black, 600, 1);
+          @include flex(flex, center, normal);
+          .icon {
+            margin-top: 0.3rem;
+          }
         }
-        .btn{
-            padding: 0;
-            margin-top: 1.5rem;
-            background-color: transparent !important;
-            @include font-family($font-main, 1em, $brand, 600, 1);
-            @include hover-active{
-                opacity: 0.5;
-            }
+        .card-text {
+          font-size: 0.8em;
         }
+      }
 
+      .ant-progress {
+        .ant-progress-inner:not(.ant-progress-circle-gradient)
+          .ant-progress-circle-path {
+          stroke: $brand;
+        }
+        .ant-progress-inner {
+          path.ant-progress-circle-trail {
+            stroke-width: 12px;
+          }
+          .ant-progress-circle-path {
+            stroke-width: 12px;
+          }
+          .ant-progress-text {
+            display: none;
+          }
+        }
+      }
     }
+  }
 }

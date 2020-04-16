@@ -21,6 +21,7 @@ const Project = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 991.98,
@@ -41,7 +42,7 @@ const Project = () => {
     <div className="projects">
       <h2>
         You may also like these projects
-        <Button>Descover all</Button>
+        <Button variant="secondary">Descover all</Button>
       </h2>
 
       <Slider {...settings}>
@@ -80,7 +81,7 @@ const Project = () => {
               <Card.Text>
                 <strong>40</strong> raised of $110,000
               </Card.Text>
-              <ProgressBar now={70} />
+              <ProgressBar now={10} />
               <Card.Text>35 days left</Card.Text>
               <ButtonGroup aria-label="Basic example">
                 <Button variant="primary">Donate</Button>
@@ -103,7 +104,7 @@ const Project = () => {
               <Card.Text>
                 <strong>40</strong> raised of $110,000
               </Card.Text>
-              <ProgressBar now={70} />
+              <ProgressBar now={50} />
               <Card.Text>35 days left</Card.Text>
               <ButtonGroup aria-label="Basic example">
                 <Button variant="primary">Donate</Button>
@@ -126,7 +127,7 @@ const Project = () => {
               <Card.Text>
                 <strong>40</strong> raised of $110,000
               </Card.Text>
-              <ProgressBar now={70} />
+              <ProgressBar now={90} />
               <Card.Text>35 days left</Card.Text>
               <ButtonGroup aria-label="Basic example">
                 <Button variant="primary">Donate</Button>

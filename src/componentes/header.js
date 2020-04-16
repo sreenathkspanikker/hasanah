@@ -86,6 +86,26 @@ const Header = () => {
           </Button>
           {state && (
             <div className="content">
+              <Nav className="ml-auto nav-notification">
+                <Nav className="nav-profile">
+                  <Nav.Link>
+                    <img className="img-fluid" src={Avatar} alt="" />
+                  </Nav.Link>
+                  <Nav.Link href="#" className="mr-0">
+                    Your List <Badge variant="secondary">5</Badge>{" "}
+                  </Nav.Link>
+                </Nav>
+
+                <Nav.Link href="#">
+                  <Icon name="chat" size="1rem" color="#cdcfd3" />{" "}
+                  <span className="dot" />
+                </Nav.Link>
+                <Nav.Link href="#">
+                  <Icon name="bell" size="1.1rem" color="#cdcfd3" />
+                  <span className="dot" style={{ right: "8px" }} />
+                </Nav.Link>
+              </Nav>
+
               <Nav>
                 <Form inline>
                   <Icon name="search" size="0.89em" />
@@ -97,32 +117,6 @@ const Header = () => {
                 </Form>
               </Nav>
 
-              <Nav className="ml-auto nav-notification">
-                <Nav.Link href="#">
-                  <Icon name="chat" size="1rem" color="#cdcfd3" />{" "}
-                  <span className="dot" />
-                </Nav.Link>
-                <Nav.Link href="#">
-                  <Icon name="bell" size="1.1rem" color="#cdcfd3" />
-                  <span className="dot" style={{ right: "8px" }} />
-                </Nav.Link>
-              </Nav>
-              <Nav className="nav-profile">
-                <Dropdown>
-                  <Dropdown.Toggle id="dropdown-profile">
-                    <img className="img-fluid" src={Avatar} alt="" />
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#">User</Dropdown.Item>
-                    <Dropdown.Item href="#">Profile</Dropdown.Item>
-                    <Dropdown.Item href="#">Settings</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Nav.Link href="#" className="mr-0">
-                  Your List <Badge variant="secondary">5</Badge>{" "}
-                </Nav.Link>
-              </Nav>
               <Nav>
                 <Nav.Link href="#">Descover</Nav.Link>
                 <Nav.Link href="#">Simple Guide</Nav.Link>
